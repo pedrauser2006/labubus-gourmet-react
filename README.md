@@ -1,16 +1,43 @@
-# React + Vite
+# Labubus Gourmet – Proyecto Tecnologías Web I
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto desarrollado para la asignatura Tecnologías Web I (SIS-214) de la Universidad Católica Boliviana San Pablo.
 
-Currently, two official plugins are available:
+El sistema consiste en la migración de una página web estática (HTML, CSS y JavaScript) a una aplicación desarrollada en React, utilizando componentes, hooks, enrutamiento y consumo de API externa.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Objetivo del Proyecto
 
-## React Compiler
+Migrar una página web tradicional a un proyecto modular en React, aplicando los conceptos fundamentales del framework y buenas prácticas de desarrollo frontend.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- JavaScript
+- CSS
+- React Router DOM
+- API externa (TheMealDB)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Características Principales
+
+- Estructura modular basada en componentes
+- Navegación entre páginas mediante React Router
+- Uso de hooks (useState, useEffect)
+- Formulario con validaciones
+- Buscador dinámico
+- Consumo de API externa
+- Interfaz reactiva y funcional
+
+API Externa Utilizada
+
+TheMealDB  
+https://www.themealdb.com/api/json/v1/1/search.php?s=
+
+Instalación y Ejecución
+
+1. npm install
+2. npm run dev
+3. Abrir en el navegador http://localhost:5173
+
+Autor
+
+Proyecto académico desarrollado para fines educativos.
