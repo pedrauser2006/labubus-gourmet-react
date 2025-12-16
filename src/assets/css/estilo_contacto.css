@@ -1,0 +1,303 @@
+/* Reinicio básico de márgenes y rellenos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Configuración general del cuerpo de la página */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111; /* Fondo oscuro para resaltar los elementos */
+  color: #f2f2f2; /* Texto claro */
+  line-height: 1.5;
+}
+
+/* ================================
+   ENCABEZADO Y NAVEGACIÓN
+   ================================ */
+header {
+  background: linear-gradient(180deg, #333 0%, #2b2b2b 100%);
+  border-bottom: 4px solid #555;
+}
+
+/* Contenedor de la marca (logo + nombre) */
+header .brand {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px; /* Espacio entre el logo y el título */
+}
+
+/* Estilos del logotipo */
+.brand .logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+}
+
+/* Título principal del sitio */
+.site-title {
+  font-size: 30px;
+  letter-spacing: 0.6px;
+}
+
+/* Estilo adaptable del título según el tamaño de pantalla */
+header .brand h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  margin: 0;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Navegación principal */
+nav {
+  background-color: transparent;
+  text-align: center;
+  padding: 10px 0 14px;
+}
+
+/* Enlaces del menú */
+nav a {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  padding: 6px 12px;
+  margin: 0 10px;
+  border-radius: 8px;
+}
+
+/* Estado activo o hover */
+nav a[aria-current="page"],
+nav a:hover {
+  background: #ffb703; /* Color característico de la marca */
+  color: #0e0f12;
+  text-decoration: none;
+}
+
+/* ================================
+   CUERPO PRINCIPAL
+   ================================ */
+main {
+  padding: 24px 20px;
+}
+
+/* Sección introductoria */
+#contenido .intro {
+  padding: 24px 0;
+  border-bottom: 1px solid #444;
+}
+
+/* Título de introducción */
+#contenido .intro h2 {
+  margin-bottom: 6px;
+}
+
+/* Texto introductorio */
+#contenido .intro p {
+  color: #cfcfcf;
+}
+
+/* Encabezado de sección (Formulario y Datos de contacto) */
+.section-header {
+  padding: 18px 0 8px;
+  border-left: 6px solid #ffb703;
+  padding-left: 12px;
+  background-color: rgba(255, 255, 255, 0.02);
+  margin-top: 18px;
+}
+
+/* Título del encabezado */
+.section-header h3 {
+  font-size: 22px;
+  margin: 0 0 4px 0;
+}
+
+/* Línea decorativa inferior */
+.section-header::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: hsl(36, 100%, 50%);
+  margin-top: 6px;
+  opacity: 0.6;
+}
+
+/* ================================
+   FORMULARIO DE CONTACTO
+   ================================ */
+
+/* Contenedor del formulario */
+#form-contacto {
+  max-width: 640px;
+  padding: 20px 0;
+}
+
+/* Etiquetas de los campos */
+#form-contacto label {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+/* Campos de texto, correo, teléfono, hora, select y textarea */
+#form-contacto input[type="text"],
+#form-contacto input[type="email"],
+#form-contacto input[type="tel"],
+#form-contacto input[type="time"],
+#form-contacto select,
+#form-contacto textarea {
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  border: 1px solid #2b2b2b;
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  margin: 6px 0 12px;
+}
+
+/* Campo de texto ampliable */
+#form-contacto textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Efecto de enfoque en los campos */
+#form-contacto input:focus,
+#form-contacto select:focus,
+#form-contacto textarea:focus {
+  border-color: #3a3a3a;
+  box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.18);
+}
+
+/* Contador de caracteres del mensaje */
+#contador {
+  font-size: 13px;
+  color: #cfcfcf;
+  margin: 6px 0 12px;
+}
+
+/* Estado del formulario (mensajes de validación) */
+#estado {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* Colores para distintos estados de mensaje */
+.ok {
+  color: #8be28b; /* Verde: éxito */
+}
+
+.advertencia {
+  color: #ffb703; /* Amarillo: advertencia */
+}
+
+.error {
+  color: hsl(0, 80%, 60%); /* Rojo: error */
+}
+
+/* ================================
+   BOTONES
+   ================================ */
+
+/* Botón base */
+.btn {
+  display: inline-block;
+  background-color: #222;
+  color: #f2f2f2;
+  border: 1px solid #2e2e2e;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Efecto hover */
+.btn:hover {
+  background-color: #2a2a2a;
+}
+
+/* Botón principal (enviar) */
+.btn--primary {
+  background-color: #ffb703;
+  color: #0e0f12;
+  border-color: #e2a400;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* ================================
+   DATOS DE CONTACTO
+   ================================ */
+#contenido section[aria-labelledby="titulo-datos"] p {
+  padding: 8px 0 20px;
+  color: #cfcfcf;
+  border-top: 1px solid #444;
+  margin-top: 8px;
+}
+
+/* ================================
+   PIE DE PÁGINA
+   ================================ */
+footer {
+  border-top: 1px solid #444;
+  text-align: center;
+  color: #cfcfcf;
+  padding: 16px 10px 28px;
+  font-size: 14px;
+}
+
+/* ================================
+   CORRECCIÓN FORMULARIO (LAYOUT)
+   ================================ */
+
+/* El form debe ser vertical */
+.contacto-page form {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Labels siempre arriba */
+.contacto-page form label {
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+/* Inputs, select y textarea ocupan todo el ancho */
+.contacto-page form input,
+.contacto-page form select,
+.contacto-page form textarea {
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+  border: 1px solid #2b2b2b;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+/* Textarea */
+.contacto-page form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Botones alineados correctamente */
+.contacto-page form button {
+  margin-top: 12px;
+}
+
+/* Mensajes de error */
+.contacto-page .error {
+  font-size: 13px;
+  margin-top: -4px;
+}
